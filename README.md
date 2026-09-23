@@ -25,7 +25,7 @@ Warpdroid itself is cross-platform (Windows, macOS, Linux); it just shells out t
 ## Install
 
 ```bash
-git clone https://github.com/<your-username>/warpdroid.git
+git clone https://github.com/geekneuron/warpdroid.git
 cd warpdroid
 npm install
 npm link

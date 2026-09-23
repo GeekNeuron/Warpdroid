@@ -1,0 +1,38 @@
+{
+  "name": "warpdroid",
+  "version": "0.1.0",
+  "description": "Zero-friction CLI to build, install, and launch open-source Android projects on your local emulator or device — no manual APK wrangling.",
+  "bin": {
+    "warpdroid": "./bin/warpdroid.js"
+  },
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "android",
+    "adb",
+    "gradle",
+    "emulator",
+    "cli",
+    "developer-tools"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.0.0",
+    "fast-xml-parser": "^4.3.6"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.22.0"
+  },
+  "scripts": {
+    "build:exe": "node scripts/build-exe.js",
+    "build:installer": "powershell -ExecutionPolicy Bypass -File installer/build-installer.ps1"
+  },
+  "pkg": {
+    "scripts": ["src/**/*.js"],
+    "targets": ["node22-win-x64"],
+    "outputPath": "dist"
+  }
+}
